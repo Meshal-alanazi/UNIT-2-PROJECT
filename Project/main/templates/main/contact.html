@@ -1,0 +1,71 @@
+{% extends "main/base.html" %}
+{% load static %}
+  
+ {% block content %}
+
+
+<main>
+    <section class="contact">
+        <h1>Get in Touch</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>I'm always open for new opportunities and interesting projects. Feel free to reach out!</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="icon">✉</span>
+                        <div>
+                            <p class="label">Email</p>
+                            <p>meshal.h.alanazi@gmail.com.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p>+966559091003</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <p class="label">Location</p>
+                            <p>Tabuk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+       
+
+       
+
+            <form class="contact-form" action="{% url 'main:contact_view' %}" method="post">
+                {% csrf_token %}
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112309.66068699752!2d36.48350025135198!3d28.398825321527106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a9ad0594132365%3A0x6f40e3c6b6139acf!2sTabuk%20Saudi%20Arabia!5e0!3m2!1sen!2sbd!4v1731434631272!5m2!1sen!2sbd" 
+                        width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                  </section>
+    
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}

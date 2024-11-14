@@ -1,0 +1,45 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>{% block title %}Home{% endblock %}</title>
+    <!DOCTYPE html>
+    <html lang="en">
+ 
+    <body>
+      <nav>
+          <div class="nav-content">
+              <div class="logo">MESHAl.</div>
+              <ul class="nav-links">
+                  <li><a href="{% url 'about:home_view'%}" >Home</a></li>
+                  <li><a href="{% url 'about:portfolio_view'%}">Portfolio</a></li>
+                  <li><a href="{% url 'about:story_view'%}">Story</a></li>
+                  <li><a href="{% url 'main:contact_view'%}">Contact</a></li>
+              </ul>
+              <div class="menu-btn">☰</div>
+          </div>
+      </nav>
+
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+
+      <footer>
+        <p>&copy; 2024 meshal alanazi. All rights reserved.</p>
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+    </body>
+    
+            
+   
+  

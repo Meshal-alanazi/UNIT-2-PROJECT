@@ -1,0 +1,55 @@
+{% extends "main/base.html" %}
+{% load static %}
+  
+ {% block content %}
+      <main>
+        <section class="hero">
+            <div class="hero-content">
+              <h1>Hey, I am Mishal</h1>
+              <div class="cta-sections">
+                <a href="link-for-developer" style="text-decoration: none;">
+                    <span id="developer" class="cta-section">developer</span>
+                  </a> &amp;
+                  <a href="{% url 'about:portfolio_view'%}" style="text-decoration: none;">
+                    <span id="photographer" class="cta-section">photographer</span>
+                  </a>
+              </div>
+              <div class="cta-buttons">
+                <a href="{% url 'about:portfolio_view'%}" class="btn primary">View Portfolio</a>
+                <a href="{% url 'main:contact_view'%}" class="btn primary">Contact Me</a>
+              </div>
+            </div>
+          </section>
+          
+  
+          <section class="about">
+              <div class="about-content">
+                  <div class="about-image">
+                      <img src="https://i.pinimg.com/236x/f7/49/de/f749de28f3b95f304e208a70beacdcec.jpg" alt="Profile">
+                  </div>
+                  <div class="about-text">
+                      <h2>About Me</h2>
+                      <p>Hello, I’m Mishal from Tabuk. I’m a Full Stack Web Developer with a passion for designing and developing dynamic websites and applications. I enjoy creating innovative web solutions and constantly learning new technologies. In my free time, I love traveling, watching movies, and playing video games..</p>
+                      <div class="stats">
+                          <div class="stat">
+                              <span class="number">🎮</span>
+                              <span class="label"></span>
+                          </div>
+                          <div class="stat">
+                              <span class="number">💻</span>
+                              <span class="label"></span>
+                          </div>
+                          <div class="stat">
+                              <span class="number">✈️</span>
+                              <span class="label"></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+        <script src="{% static 'js/script.js' %}"></script>
+      </main>
+  
+{% endblock %}

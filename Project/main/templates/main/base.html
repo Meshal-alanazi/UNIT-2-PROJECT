@@ -13,13 +13,15 @@
       <nav>
           <div class="nav-content">
               <div class="logo">MESHAl.</div>
+              <input type="checkbox" class="toggle" id="toggle" style="display: none;" />
               <ul class="nav-links">
                   <li><a href="{% url 'about:home_view'%}" >Home</a></li>
                   <li><a href="{% url 'about:portfolio_view'%}">Portfolio</a></li>
                   <li><a href="{% url 'about:story_view'%}">Story</a></li>
                   <li><a href="{% url 'main:contact_view'%}">Contact</a></li>
               </ul>
-              <div class="menu-btn">☰</div>
+              <label class="menu-btn" for="toggle">☰</label>
+              
           </div>
       </nav>
 

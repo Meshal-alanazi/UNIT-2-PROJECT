@@ -487,9 +487,21 @@ footer {
   color: var(--gray-400);
 }
 
+.toggle:checked ~  .nav-links{
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
 @media (max-width: 768px) {
   .nav-links {
       display: none;
+  }
+
+  .toggle:checked ~  .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }
 
   .menu-btn {

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const developerSection = document.getElementById('developer');
     const photographerSection = document.getElementById('photographer');
     const heroSection = document.querySelector('.hero');
-
+   
    
     developerSection.addEventListener('mouseenter', function() {
         heroSection.style.backgroundImage = "url('https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?auto=format&fit=crop&q=80')";

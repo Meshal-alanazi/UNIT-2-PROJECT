@@ -14,7 +14,7 @@ def contact_view(request:HttpRequest):
 
         print(f"Received data - Name: {name}, Email: {email}, Message: {message}")
 
-        if email:  # تحقق إضافي قبل الحفظ
+        if email:  
             contact = Contact(
                 name=name,
                 email=email,
@@ -22,6 +22,6 @@ def contact_view(request:HttpRequest):
             )
             contact.save()
         else:
-            print("Email is missing!")  # تنبيه إذا كان البريد الإلكتروني مفقودًا
+            print("Email is missing!") 
         return redirect('about:home_view')
     return render(request, "main/contact.html")

@@ -1,0 +1,44 @@
+{% extends "main/dashboard.html" %}
+{% load static %}
+
+{% block content %}
+
+<thead>
+    <tr>
+        <th>IMAGE</th>
+        <th>NAME</th>
+        <th>ABOUT</th>
+        <th>TYPE</th>
+        
+    </tr>
+</thead>
+<tbody>
+    {% for p in proj %}
+    <tr>
+        {% if p.image %}
+         <td><img src="{{ p.image.url }}"></td>  
+         {% else %}
+           
+        {% endif %}             
+        <td>{{p.title}}</td>
+        <td>{{p.about}}</td>
+        <td>{{p.category}}</td>
+        <td class="actions">
+        <button class="btn-view">👁️</button>
+        <a href="{% url 'dashboard:project_update' p.id %}"><button class="btn-edit">✏️</button></a>
+        <form action="{% url 'dashboard:project_delete' p.id %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn-delete">🗑️</button>
+        </form>
+            
+         
+            
+        </td>
+    </tr>
+  
+</tbody>
+{% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+{% block content %}
+<section class="about">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="{{ proj.image.url }}" alt="Plant Image" style="width: 500px; border-radius: px; float: left; margin: 0 0 0 0;">
+        </div>
+        <div class="about-text">
+            <h2>{{proj.category}}</h2>
+            <p>{{proj.about}}</p>
+            <div class="stats">
+                <div class="stat">
+                   
+                </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "main/dashboard.html" %}
+{% load static %}
+
+{% block content %}
+
+<thead>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>MESSAGE</th>
+        
+        
+    </tr>
+</thead>
+<tbody>
+    {% for c in contact %}
+    <tr>
+                   
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.message}}</td>
+        <td class="actions">
+        <button class="btn-view">👁️</button>
+     
+        <form action="{% url 'dashboard:message_delete' c.id %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn-delete">🗑️</button>
+        </form>
+            
+         
+            
+        </td>
+    </tr>
+  
+</tbody>
+{% endfor %}
+
+</table>
+
+{% endblock %}

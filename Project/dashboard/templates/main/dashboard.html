@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+    <link rel="stylesheet" href="{% static 'css/mange.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <a href="{% url 'dashboard:prject_view' %}" style="text-decoration: none; color: aliceblue;">
+                <div class="menu-item">Project</div></a>
+            <a href="{% url 'dashboard:Messages_view' %}" style="text-decoration: none; color: aliceblue;">
+                <div class="menu-item">Message</div></a>
+        </nav>
+
+        <main class="content">
+
+            <div class="breadcrumb">
+                <span>Dashboard</span>
+                <span class="separator">></span>
+                <span>Items</span>
+            </div>
+
+            <h1>Manage Items</h1>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Item</label>
+                    <select>
+                        <option>Select Item Type</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select>
+                        <option>{{p.category}}</option>
+                    </select>
+                </div>
+                <button class="btn-search">Search</button>
+                <button class="btn-reset">Reset</button>
+            </div>
+
+            <div class="table-controls">
+               
+                <a href="{% url 'dashboard:new_project' %}"><button class="btn-new">+ New</button></a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+
+            <table class="items-table">
+                {% block content %}{% endblock %}
+                
+        </main>
+    </div>
+</body>
+</html>

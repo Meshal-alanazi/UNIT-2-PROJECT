@@ -12,12 +12,13 @@
     <body>
       <nav>
           <div class="nav-content">
-              <div class="logo">MESHAl.</div>
+              <div class="logo">MISHAl.</div>
               <input type="checkbox" class="toggle" id="toggle" style="display: none;" />
               <ul class="nav-links">
                   <li><a href="{% url 'about:home_view'%}" >Home</a></li>
-                  <li><a href="{% url 'about:portfolio_view'%}">Portfolio</a></li>
+                  <li><a href="{% url 'about:portfolio_view'%}">Project</a></li>
                   <li><a href="{% url 'about:story_view'%}">Story</a></li>
+                  <li><a href="{% url 'about:game_view'%}">games</a></li>
                   <li><a href="{% url 'main:contact_view'%}">Contact</a></li>
               </ul>
               <label class="menu-btn" for="toggle">☰</label>
@@ -29,15 +30,16 @@
         {% block content %}{% endblock %}
       </main>
 
+   
       <footer>
-        <p>&copy; 2024 meshal alanazi. All rights reserved.</p>
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
+        <div class="social-links">
+            <a href="#" title="Twitch"><i class="fab fa-twitch"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-text">Follow me on social media for more gaming content!</p>
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
     </body>

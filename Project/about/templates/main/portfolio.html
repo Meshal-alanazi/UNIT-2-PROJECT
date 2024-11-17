@@ -5,42 +5,29 @@
 
     <main>
         <section class="portfolio">
-            <h1>Portfolio</h1>
+            <h1>Project</h1>
             <div class="portfolio-filters">
                 <button class="filter-btn active">All</button>
                
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Urban Portrait">
-                    <div class="portfolio-item-overlay">
-                        <h3>Natural</h3>
-                        <p></p>
+                {% for p in proj %}
+                    <div class="portfolio-item">
+                        {% if p.image %}
+                            <img src="{{ p.image.url }}" alt="{{ p.title }}">
+                        {% else %}
+                            <p>No image available</p>
+                        {% endif %}
+                        <div class="portfolio-item-overlay">
+                            <a href="{% url 'about:post_detail' p.id %}" style="text-decoration: none;color: aliceblue;"><h3>{{p.category}}</h3></a>
+                            <h2>{{p.title}}</h2>
+                          
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Mountain Serenity">
-                    <div class="portfolio-item-overlay">
-                        <h3>City</h3>
-                        <p>Sunrise at the Swiss Alps</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" alt="City Life">
-                    <div class="portfolio-item-overlay">
-                        <h3>City Life</h3>
-                        <p>Capturing the essence of urban living</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2" alt="Modern Lines">
-                    <div class="portfolio-item-overlay">
-                        <h3>Modern Lines</h3>
-                        <p>Contemporary architecture study</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
+            
         </section>
     </main>
 

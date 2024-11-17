@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
     developerSection.addEventListener('mouseleave', function() {
-        heroSection.style.backgroundImage = "url('https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif')";
+        heroSection.style.backgroundImage = "url('https://i.pinimg.com/236x/b3/4f/3d/b34f3d4ded10e2cd1456f82821fafe49.jpg')";
     });
     photographerSection.addEventListener('mouseleave', function() {
-        heroSection.style.backgroundImage = "url('https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif')";
+        heroSection.style.backgroundImage = "url('https://i.pinimg.com/236x/b3/4f/3d/b34f3d4ded10e2cd1456f82821fafe49.jpg')";
     });
 });
 

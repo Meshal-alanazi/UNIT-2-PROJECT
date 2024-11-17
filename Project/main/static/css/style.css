@@ -1,6 +1,6 @@
 
 :root {
-  --primary-color: #2a2e70;
+  --primary-color: #5c5f5f;
   --bg-color: #000000;
   --text-color: #FFFFFF;
   --gray-800: #1F2937;
@@ -79,7 +79,7 @@ nav {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: url('https://i.pinimg.com/originals/81/17/8b/81178b47a8598f0c81c4799f2cdd4057.gif') center/cover;
+  background: url('https://i.pinimg.com/736x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg') center/cover;
   transition: background 0.5s ease;
 }
 .hero::before {
@@ -109,7 +109,7 @@ nav {
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #0a0248, #f0dde6);
+  background: linear-gradient(to right, #212121, #ffffff);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -487,6 +487,28 @@ footer {
   color: var(--gray-400);
 }
 
+.social-links a:hover {
+  transform: translateY(-3px);
+  background: #6441a5;
+  box-shadow: 0 4px 12px rgba(100, 65, 165, 0.3);
+}
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  align-items: center;
+  justify-content: center;
+ 
+  transition: all 0.3s ease;
+}
+.footer-text {
+  color: #666;
+  font-size: 0.9rem;
+}
 .toggle:checked ~  .nav-links{
   display: flex;
   flex-direction: row;
@@ -559,4 +581,66 @@ footer {
 }
 
 
+.clips-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
 
+.clip-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.clip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  background: #2a2a2a;
+  border-bottom: 3px solid #6441a5;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2a2a2a;
+}
+
+.clip-info {
+  padding: 1rem;
+}
+
+.clip-info h3 {
+  color: #6441a5;
+  margin-bottom: 0.5rem;
+}
+
+.clip-info p {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .clips-container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+}

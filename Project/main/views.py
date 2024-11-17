@@ -23,5 +23,5 @@ def contact_view(request:HttpRequest):
             contact.save()
         else:
             print("Email is missing!") 
-        return redirect('about:home_view')
+        return redirect('main:contact_view')
     return render(request, "main/contact.html")

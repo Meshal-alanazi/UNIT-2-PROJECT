@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+  
+ {% block content %}
+ 
+    
+    <main class="clips-container">
+        <div class="clip-card">
+            <div class="video-container">
+                <iframe  src="{% static 'videos/my1.mp4' %}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="clip-info">
+                <h3>TEKKEN</h3>
+                <p>Amazing clutch play!</p>
+            </div>
+        </div>
+
+        <div class="clip-card">
+            <div class="video-container">
+                <iframe  src="{% static 'videos/my2.mp4' %}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="clip-info">
+                <h3>TEKKEN</h3>
+                <p>Perfect strategy execution</p>
+            </div>
+        </div>
+
+        <div class="clip-card">
+            <div class="video-container">
+                <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="clip-info">
+                <h3>Speed Run</h3>
+                <p>New personal record!</p>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock %}

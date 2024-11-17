@@ -1,0 +1,55 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<main>
+    <section class="contact">
+        <form class="contact-form" action="{% url 'dashboard:new_project' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1 class="form-title">Add New Project</h1> 
+            
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter project title" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About:</label>
+                <textarea id="about" name="about" placeholder="Write a brief description" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" class="form-control" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Bootcamp Projects">Bootcamp Projects</option>
+                    <option value="Personal Projects">Personal Projects</option>
+                    <option value="Data Science">Data Science</option>
+                   
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" class="form-control-file">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Create Project</button>
+            </div>
+        </form>
+    </div>
+    </section>
+
+</main>
+{% endblock %}
+
+
+
+
+

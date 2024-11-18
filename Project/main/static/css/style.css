@@ -79,7 +79,7 @@ nav {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: url('https://i.pinimg.com/736x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg') center/cover;
+  background: url('https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;
   transition: background 0.5s ease;
 }
 .hero::before {
@@ -644,3 +644,4 @@ footer {
       font-size: 2rem;
   }
 }
+ 

@@ -24,7 +24,7 @@
         <td>{{p.about}}</td>
         <td>{{p.category}}</td>
         <td class="actions">
-        <button class="btn-view">👁️</button>
+        
         <a href="{% url 'dashboard:project_update' p.id %}"><button class="btn-edit">✏️</button></a>
         <form action="{% url 'dashboard:project_delete' p.id %}" method="post" style="display: inline;">
             {% csrf_token %}
